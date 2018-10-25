@@ -9,6 +9,10 @@ class SongsController < ApplicationController
     @song = Song.new
   end
 
+  def show
+    @song = Song.find(params[:id])
+  end
+
   def create
     # require 'pry'; binding.pry
     artist = Artist.find(params[:artist_id])

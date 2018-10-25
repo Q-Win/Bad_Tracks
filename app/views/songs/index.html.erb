@@ -3,4 +3,5 @@
 <% @songs.each do |song| %>
   <%=song.title  %>
   <li>Plays: <%= song.play_count  %></li>
+  <li> <%= link_to "Add Song to Cart", song_path(song.id) %> </li>
   <% end %>
